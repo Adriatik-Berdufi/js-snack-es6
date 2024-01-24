@@ -11,7 +11,7 @@ const vips = [
     'Amal Clooney',
     'Maneskin',
   ];
-
+/*
   let formatoTipografia =  vips.map((invitato ,index) => {
     invitato = {
       nomeTavolo : "Tavolo Vip",
@@ -21,4 +21,6 @@ const vips = [
     return invitato;
 
   });
+  */
+  let formatoTipografia =  vips.map((invitato ,index) => invitato = {nomeTavolo : "Tavolo Vip",nomeInvitato : invitato ,nrPosto : index + 1});
   console.table(formatoTipografia);
