@@ -35,3 +35,24 @@ const students = [
         grades: 84
     }
 ];
+
+console.log("Un array di stringhe contenente il loro nome tutto in maiuscolo");
+students.forEach((elemento , index , array) => elemento.name = elemento.name.toUpperCase());
+console.table(students);
+
+console.log('Un array di oggetti "studente" che hanno un totale di voti superiore a 70');
+let media70 = students.filter((student) => {
+    student = student.grades > 70;
+    return student;   
+});
+console.table(media70);
+
+
+
+console.log('Un array di oggetti "studente" che hanno un totale di voti superiore a 70 e id superiore 120');
+let mediaTra70e120 = students.filter((student) => {
+    student = student.grades > 70 && student.id > 120;
+
+    return student;   
+});
+console.table(mediaTra70e120);
