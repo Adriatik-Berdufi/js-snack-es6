@@ -44,7 +44,6 @@ const teams = [
     },
   ];
 
-console.log('team.score');
 teams.forEach((team) => {
   team.score = Math.floor(Math.random()* 21);
   team.foul = Math.floor(Math.random()* 10);
@@ -53,9 +52,13 @@ teams.forEach((team) => {
 });
 console.table(teams);
 
+//con forEach
 const newTable = [];
 teams.forEach((team) => {
   const newteam ={ name: team.name, foul: team.foul };
   return newTable.push(newteam );
 });
 console.table(newTable);
+//con destructuring
+const teamFoul = teams.map(({name,foul})=>({name, foul}));
+console.table(teamFoul);
