@@ -43,3 +43,19 @@ const teams = [
       foul: 0,
     },
   ];
+
+console.log('team.score');
+teams.forEach((team) => {
+  team.score = Math.floor(Math.random()* 21);
+  team.foul = Math.floor(Math.random()* 10);
+  console.log(team.score);
+  return team;
+});
+console.table(teams);
+
+const newTable = [];
+teams.forEach((team) => {
+  const newteam ={ name: team.name, foul: team.foul };
+  return newTable.push(newteam );
+});
+console.table(newTable);
